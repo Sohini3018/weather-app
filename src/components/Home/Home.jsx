@@ -7,10 +7,10 @@ const Home = () => {
   const [name, setName] = useState('');
   const [error, setError] = useState('');
   const [cities, setCities] = useState([]); 
-
+  const apiKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
   const fetchWeather = async (cityName) => {
     try {
-      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=21e57ebc5301756748f197b6ebc58bde&units=metric`; // Replace with your API key
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`; 
       const response = await axios.get(apiUrl);
       return {
         cityName: response.data.name,
