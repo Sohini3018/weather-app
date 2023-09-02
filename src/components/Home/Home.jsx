@@ -6,7 +6,7 @@ import './home.css';
 const Home = () => {
   const [name, setName] = useState('');
   const [error, setError] = useState('');
-  const [cities, setCities] = useState([]); // State for storing weather data for multiple cities
+  const [cities, setCities] = useState([]); 
 
   const fetchWeather = async (cityName) => {
     try {
@@ -31,7 +31,7 @@ const Home = () => {
   };
 
   const getImagePath = (weatherMain) => {
-    // Define your image paths based on weather conditions
+    
     switch (weatherMain) {
       case 'Clouds':
         return '/assets/cloud.png';
