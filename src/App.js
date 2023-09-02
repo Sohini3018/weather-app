@@ -1,16 +1,12 @@
 import './App.css';
-import Box from '@mui/material/Box';
-import Navigation from './components/Navigation/Navigation';
-
 function App() {
-  return (
-    <Box>
-      <Navigation />
-      
-    </Box>
-    
-  );
   
+  return (
+  <div className='app-container'>
+    Hello
+  </div>
+    
+  )
 }
 
 export default App;
